@@ -1,0 +1,168 @@
+USE estebandb
+go
+delete from Clientes
+insert into Clientes(Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('12345678-1234-5678-1234-123456789012','Esther','Avila','Llamas', '1972-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('12345678-1234-5678-2234-123456789013','Samuel', 'Sanchez','Avila', '1998-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('12345678-1234-5678-3234-123456789014','Esteban', 'Sanchez','Avila', '2001-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('12345678-1234-5678-4234-123456789015','Narciso', 'Sanchez','Mendoza', '1970-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('12345678-1234-5678-5234-123456789016','Melina', 'Sanchez','Avila', '2008-11-07')
+insert into Clientes(Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('11345678-1234-5678-6234-123456789012','Yaziel','Avila','Gomez', '1972-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('13345678-1234-5678-7234-123456789013','Leonardo', 'Rodriguez','Avila', '1998-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('14345678-1234-5678-8234-123456789014','Orlando', 'Sanchez','Garcia', '2001-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('16345678-1234-5678-9234-123456789015','Andres', 'Mendoza','Mendoza', '1970-11-07')
+insert into Clientes (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('19345678-1234-5678-0234-123456789016','Dibanhi', 'Sanchez','Bravo', '2008-11-07')
+select * from Clientes
+
+delete from DetallesDeVenta
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('12345678-1234-5678-1234-123456789012','50','300','2002-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values('12345678-1234-5678-1234-123456789013','98','150','2004-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('12345678-1234-5678-1234-123456789014','46','200','2007-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('12345678-1234-5678-1234-123456789015','60','400','2003-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('12345678-1234-5678-1234-123456789016','70','500','2005-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('11345678-1234-5678-1234-123456789012','58','300','2002-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values('13345678-1234-5678-1234-123456789013','99','150','2004-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('15345678-1234-5678-1234-123456789014','46','200','2007-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('19345678-1234-5678-1234-123456789015','23','400','2003-04-04')
+insert into DetallesDeVenta(Id,CantProductos,DineroGanado,FechaDeEntrega)
+values ('17345678-1234-5678-1234-123456789016','48','500','2005-04-04')
+select * from DetallesDeVenta
+
+delete from Domicilios
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345678-1234-5678-1234-123456789012','Nuevo Leon','Escobedo','8',255,178)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345678-1234-5678-1234-123456789013','Oaxaca','Villa Hidalgo','7',974,878)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345678-1234-5678-1234-123456789014','Guadalajara','Tonala','6',026,978)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345678-1234-5678-1234-123456789015','Tamaulipas','Jimenez','5',781,778)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345678-1234-5678-1234-123456789016','Jalisco','Amaca','4',965,358)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345671-1234-5678-1234-123456789012','Nuevo Leon','Escobedo','0',265,998)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345672-1234-5678-1234-123456789013','Oaxaca','Villa Hidalgo','1',904,078)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345673-1234-5678-1234-123456789014','Guadalajara','Tonala','3',022,728)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345674-1234-5678-1234-123456789015','Tamaulipas','Jimenez','20',301,748)
+insert into Domicilios(Id,Estado,Municipio,Calle,NumeroExt,NumeroInt)
+values('12345675-1234-5678-1234-123456789016','Jalisco','Amaca','10',975,498)
+select * from Domicilios
+
+delete from Productos
+insert into Productos(Id,NomProducto,Marca,FechaDeExpiracion) values
+('12345678-1234-5678-1234-123456789012','Donas','Gamesa','2020-04-04'),
+('12345678-1234-5678-1234-123456789013','Galletas','Maria','2018-04-04'),
+('12345678-1234-5678-1234-123456789014','Cafe','Nescafe','2019-04-04'),
+('12345678-1234-5678-1234-123456789015','Paleta Payaso','Marinela','2019-05-04'),
+('12345678-1234-5678-1234-123456789016','Mayonesa','Macorni','2009-07-04'),
+('12345671-1234-5678-1234-123456789012','Donitas','Gamesita','2020-04-04'),
+('12345672-1234-5678-1234-123456789013','Galletitas','Mariasita','2018-04-04'),
+('12345673-1234-5678-1234-123456789014','Cafesito','Nescafesito','2019-04-04'),
+('12345674-1234-5678-1234-123456789015','Paletita Payasito','Marinelito','2019-05-04'),
+('12345675-1234-5678-1234-123456789016','Mayonesita','Macornisito','2009-07-04')
+select * from Productos
+
+delete from Vendedores
+insert into Vendedores(Id,Nombre,ApellidoPaterno,ApellidoMaterno,FechaDeNacimiento)
+values ('12345678-1234-5678-1234-123456789012','Esther','Avila','Llamas', '1972-11-07')
+insert into Vendedores(Id,Nombre,ApellidoPaterno,ApellidoMaterno,FechaDeNacimiento)
+values ('12345678-1234-5678-1234-123456789013','Samuel', 'Sanchez','Avila', '1998-11-07')
+insert into Vendedores(Id,Nombre,ApellidoPaterno,ApellidoMaterno,FechaDeNacimiento)
+values ('12345678-1234-5678-1234-123456789014','Esteban', 'Sanchez','Avila', '2001-11-07')
+insert into Vendedores(Id,Nombre,ApellidoPaterno,ApellidoMaterno,FechaDeNacimiento)
+values ('12345678-1234-5678-1234-123456789015','Narciso', 'Sanchez','Mendoza', '1970-11-07')
+insert into Vendedores(Id,Nombre,ApellidoPaterno,ApellidoMaterno,FechaDeNacimiento)
+values ('12345678-1234-5678-1234-123456789016','Melina', 'Sanchez','Avila', '2008-11-07')
+insert into Vendedores(Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('11345678-1234-5678-1234-123456789012','Yaziel','Avila','Gomez', '1972-11-07')
+insert into Vendedores(Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('13345678-1234-5678-1234-123456789013','Leonardo', 'Rodriguez','Avila', '1998-11-07')
+insert into Vendedores(Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('14345678-1234-5678-1234-123456789014','Orlando', 'Sanchez','Garcia', '2001-11-07')
+insert into Vendedores(Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('16345678-1234-5678-1234-123456789015','Andres', 'Mendoza','Mendoza', '1970-11-07')
+insert into Vendedores (Id, Nombre, ApellidoPaterno, ApellidoMaterno, FechaDeNacimiento)
+values ('19345678-1234-5678-1234-123456789016','Dibanhi', 'Sanchez','Bravo', '2008-11-07')
+select * from Vendedores
+
+Update Vendedores set Nombre='Andrea' where Id='19345678-1234-5678-0234-123456789016'
+update Clientes set Nombre='Andrea' where Nombre='Dibanhi'
+update DetallesDeVenta set CantProductos=30 where  Id='11345678-1234-5678-1234-123456789012'
+update Domicilios set Municipio='Salit' where Id='12345675-1234-5678-1234-123456789016'
+update Productos set Marca='Nito' where Id='12345675-1234-5678-1234-123456789016'
+delete from Clientes where Nombre='Esteban'
+delete from DetallesDeVenta where DineroGanado='46'
+delete from Domicilios where Estado='Jalisco'
+delete from Productos where NomProducto='Cafe'
+delete from Vendedores Where Nombre='Esteban'
+elect * from Clientes where Nombre='Esteban'
+select * from DetallesDeVenta where Id='12345678-1234-5678-1234-123456789012'
+select Municipio from Domicilios where Id='12345678-1234-5678-1234-123456789012'
+select * from Productos where Marca='Gamesa'
+select NombreCompleto from Vendedores where Edad='19'
+
+select * from Clientes group by Id,Nombre,ApellidoPaterno,ApellidoMaterno,NombreCompleto,FechaDeNacimiento,Edad
+select Nombre from Clientes Where Edad='19' group by Nombre
+select NomProducto from Productos Where Marca='Gamesa' group by NomProducto
+select NombreCompleto,Edad from Vendedores Where Edad='19' group by NombreCompleto,Edad
+select Estado,Municipio from Domicilios group by Estado,Municipio
+
+select COUNT(*) from Clientes Where Edad>18
+select MAX(CantProductos) From DetallesDeVenta where DineroGanado>300
+select MIN(DineroGanado) from DetallesDeVenta where CantProductos>50
+select SUM(DineroGanado) From DetallesDeVenta where CantProductos<50
+select Var(DineroGanado) From DetallesDeVenta 
+
+select Id ,sum(DineroGanado) AS Dinero from DetallesDeVenta Group by Id Having SUM(DineroGanado)>499
+select Id ,max(DineroGanado) AS Dinero from DetallesDeVenta Group by Id Having SUM(DineroGanado)<300
+select Id ,min(DineroGanado) AS Dinero from DetallesDeVenta Group by Id Having SUM(DineroGanado)>150
+select CantProductos from DetallesDeVenta Group by CantProductos Having SUM(DineroGanado)>0
+select Id from DetallesDeVenta Group by Id Having SUM(DineroGanado)>499
+
+select top 5 * from Clientes where ApellidoPaterno='Avila'
+select top 3 * from Clientes where ApellidoMaterno='Avila'
+select top 6 Marca from Productos where Marca!='Gamesa'
+select top 2 Id from DetallesDeVenta where DineroGanado>450
+select top 5 NombreCompleto from Vendedores  where Edad<18
+select * from Clientes left join Vendedores on Clientes.Nombre=Vendedores.Nombre
+select * from Clientes left join Vendedores on Clientes.Edad=Vendedores.Edad
+
+select top 5 Clientes.NombreCompleto from Clientes right join Productos on Clientes.Id=Productos.Id
+select * from Clientes right join Vendedores on Clientes.Id=Vendedores.Id
+
+select Clientes.Nombre from Clientes inner join Vendedores on Clientes.NombreCompleto=Vendedores.NombreCompleto
+select * from Clientes inner join Vendedores on Clientes.Id=Vendedores.Id
+
+Select Clientes.NombreCompleto from Clientes cross join Vendedores
+select * from Vendedores cross join Domicilios
+
+select Clientes.NombreCompleto from  Clientes where Clientes.Id IN (select Vendedores.Id from Vendedores where Vendedores.Edad>18)
+
+-- Hize un select con into para crear una tabla, pero no supe como unir un with con un into UnU
+select Clientes.NombreCompleto,Clientes.Edad into Clientes2 from Clientes
+with Clientes3 (Clientes2.NombreCompleto,Clientes2.Edad) as (select Clientes.NombreCompleto,Clientes.Edad into Clientes2 from Clientes) Select Clientes2.NombreCompleto From Clientes3
+
+
+
+

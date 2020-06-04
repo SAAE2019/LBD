@@ -1,0 +1,10 @@
+CREATE view Nombre_ClienteyVendedor as select Clientes.Nombre from Clientes left join Vendedores on Clientes.Nombre=Vendedores.Nombre
+go
+CREATE view Productos_MasVendidos as select CantProductos from DetallesDeVenta Group by CantProductos having DineroGanado>0
+go
+CREATE view Productos_MenosVendidos as select Id ,min(DineroGanado) AS Dinero from DetallesDeVenta Group by Id Having SUM(DineroGanado)>150
+go
+CREATE view NombreCompleto_ClienteyVendedor as select Clientes.Nombre from Clientes inner join Vendedores on Clientes.NombreCompleto=Vendedores.NombreCompleto
+go
+CREATE view Id_ClienteyVendedor as select Clientes.Id from Clientes inner join Vendedores on Clientes.Id=Vendedores.Id
+go

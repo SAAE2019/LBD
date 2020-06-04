@@ -1,0 +1,53 @@
+CREATE procedure MostrarAdultos as
+select Clientes.NombreCompleto from Clientes where Clientes.Edad>=18
+go
+
+CREATE procedure MarcaProducto @NAME varchar(50)=null as
+if @NAME is null
+begin
+	Select 'Nombre vacio' return
+	end;
+	Select * from Productos where NomProducto=@NAME
+go
+
+CREATE procedure NombreCliente @NAME varchar(50), @APELLIDO varchar(50) as
+select * from Clientes where Nombre=@NAME and ApellidoPaterno=@APELLIDO
+go
+
+CREATE procedure DineroPorProducto @NAME varchar(50),@DINERO int as
+select DetallesDeVenta.DineroGanado,Productos.NomProducto from DetallesDeVenta,Productos where
+DetallesDeVenta.Id=Productos.Id and DetallesDeVenta.DineroGanado=@DINERO and Productos.NomProducto=@NAME
+go
+
+CREATE procedure DomicilioCliente @NAME varchar(50),@DIRECCION varchar(50) as
+select Domicilios.Estado,Clientes.NombreCompleto from Domicilios,Clientes where
+Domicilios.Estado=@DIRECCION and Clientes.NombreCompleto=@NAME
+go
+
+CREATE function TOTAL (@Precio1 int,@Precio2 int) returns int as
+begin
+	declare @total int
+	set @total=(@Precio1+@Precio2)
+	return @total
+end
+go
+
+CREATE function DINEROTOTALGANADO (@id_producto VARCHAR(50)) returns int as
+begin
+	declare @total int
+	select @total =(count(Productos.NomProducto)*sum(DetallesDeVenta.DineroGanado))
+	from DetallesDeVenta,Productos where DetallesDeVenta.Id= @id_producto and DetallesDeVenta.Id=Productos.Id 
+	return @total
+end
+go
+
+CREATE trigger BorrarCliente on Clientes
+instead of delete as
+DELETE from Clientes where Nombre='Esteban'
+go
+
+CREATE trigger Nombre on Clientes
+instead of insert as 
+select * from inserted
+go
+
